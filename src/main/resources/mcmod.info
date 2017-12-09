@@ -1,0 +1,19 @@
+[
+{
+  "modid": "starwarsmod",
+  "name": "Star Wars Mod",
+  "description": "A Star Wars Themed Mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["
+  Author: King of Creepers
+  Developer: fabbe50
+  "],
+  "credits": "George Lucas for creating Star Wars",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
