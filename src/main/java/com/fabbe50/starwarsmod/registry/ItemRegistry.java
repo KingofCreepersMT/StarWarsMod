@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.registry;
 
+import com.fabbe50.starwarsmod.common.items.ItemKyberCrystal;
 import com.fabbe50.starwarsmod.common.items.ItemLightSaber;
 import javafx.scene.effect.Light;
 import net.minecraft.item.Item;
@@ -9,8 +10,10 @@ import net.minecraft.item.Item;
  */
 public class ItemRegistry {
     public static final Item LIGHT_SABER = new ItemLightSaber("light_saber", Item.ToolMaterial.DIAMOND);
+    public static final Item KYBER_CRYSTAL = new ItemKyberCrystal("kybercrystal");
 
     public static void init() {
         RegistryHandler.registerItem(LIGHT_SABER);
+        RegistryHandler.registerItem(KYBER_CRYSTAL);
     }
 }

@@ -117,6 +117,10 @@ public class RegistryHandler {
         public static void registerModels(ModelRegistryEvent event) {
             registerItemModel(ItemRegistry.LIGHT_SABER, 0, "lightsaber");
             registerItemModel(ItemRegistry.LIGHT_SABER, 1, "lightsaber_off");
+            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 0, "kybercrystal_blue");
+            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 1, "kybercrystal_green");
+            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 2, "kybercrystal_purple");
+            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 3, "kybercrystal_red");
 
             for (Item item : ITEM_LIST) {
                 registerItemModel(item);

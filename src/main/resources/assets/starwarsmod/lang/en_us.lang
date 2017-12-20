@@ -7,6 +7,10 @@
 #############################################################################
 item.starwarsmod:light_saber.name=Light Saber
 item.starwarsmod:light_saber_off.name=Light Saber
+item.starwarsmod:kybercrystal_blue.name=Blue Kyber Crystal
+item.starwarsmod:kybercrystal_green.name=Green Kyber Crystal
+item.starwarsmod:kybercrystal_purple.name=Purple Kyber Crystal
+item.starwarsmod:kybercrystal_red.name=Red Kyber Crystal
 
 #############################################################################
 #                                  Blocks                                   #
