@@ -7,11 +7,8 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["
-  Author: King of Creepers
-  Developer: fabbe50
-  "],
-  "credits": "George Lucas for creating Star Wars",
+  "authorList": ["MultiCraft"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
