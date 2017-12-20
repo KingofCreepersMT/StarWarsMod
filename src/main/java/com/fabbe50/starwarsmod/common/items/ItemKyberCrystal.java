@@ -21,11 +21,9 @@ public class ItemKyberCrystal extends ItemBase {
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        try {
+        if (stack.getMetadata() <= 3)
             return "item." + this.getRegistryName().getResourceDomain() + ":" + this.getRegistryName().getResourcePath() + "_" + names[stack.getMetadata()];
-        } catch (NullPointerException e) {
-            return "";
-        }
+        return "";
     }
 
     @SideOnly(Side.CLIENT)

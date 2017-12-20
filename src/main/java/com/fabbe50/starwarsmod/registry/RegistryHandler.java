@@ -15,10 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by fabbe on 08/12/2017 - 11:47 PM.
@@ -94,11 +91,19 @@ public class RegistryHandler {
         ItemRegistrationHandler.items.add(item);
     }
 
+    public static void registerItem(Item item, String... names) {
+        ItemRegistrationHandler.items.add(item);
+        Map<Item, String[]> itemStringMap = new HashMap<>();
+        itemStringMap.put(item, names);
+        ItemRegistrationHandler.itemLoc.add(itemStringMap);
+    }
+
     @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
     public static class ItemRegistrationHandler {
         private static final Set<Item> ITEM_LIST = new HashSet<>();
         private static final Set<Item> registeredItemList = new HashSet<>();
         public static final List<Item> items = new ArrayList<>();
+        public static final List<Map<Item, String[]>> itemLoc = new ArrayList<>();
 
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -115,12 +120,12 @@ public class RegistryHandler {
 
         @SubscribeEvent
         public static void registerModels(ModelRegistryEvent event) {
-            registerItemModel(ItemRegistry.LIGHT_SABER, 0, "lightsaber");
-            registerItemModel(ItemRegistry.LIGHT_SABER, 1, "lightsaber_off");
-            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 0, "kybercrystal_blue");
-            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 1, "kybercrystal_green");
-            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 2, "kybercrystal_purple");
-            registerItemModel(ItemRegistry.KYBER_CRYSTAL, 3, "kybercrystal_red");
+            for (Map<Item, String[]> map : itemLoc) {
+                String[] s = (String[])map.values().toArray()[0];
+                for (int i = 0; i < s.length; i++) {
+                    registerItemModel((Item)map.keySet().toArray()[0], i, s[i]);
+                }
+            }
 
             for (Item item : ITEM_LIST) {
                 registerItemModel(item);

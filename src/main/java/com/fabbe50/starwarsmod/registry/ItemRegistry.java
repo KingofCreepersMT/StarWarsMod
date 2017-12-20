@@ -12,8 +12,11 @@ public class ItemRegistry {
     public static final Item LIGHT_SABER = new ItemLightSaber("light_saber", Item.ToolMaterial.DIAMOND);
     public static final Item KYBER_CRYSTAL = new ItemKyberCrystal("kybercrystal");
 
+
+    //Normal items: RegistryHandler.registerItem(ITEM);
+    //Meta items: RegistryHandler.registerItem(ITEM, "path0", "path1", "path2"...);
     public static void init() {
-        RegistryHandler.registerItem(LIGHT_SABER);
-        RegistryHandler.registerItem(KYBER_CRYSTAL);
+        RegistryHandler.registerItem(LIGHT_SABER, "lightsaber", "lightsaber_off");
+        RegistryHandler.registerItem(KYBER_CRYSTAL, "kybercrystal_blue", "kybercrystal_green", "kybercrystal_purple", "kybercrystal_red");
     }
 }
