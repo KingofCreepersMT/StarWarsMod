@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.helpers;
 
+import com.fabbe50.starwarsmod.Reference;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
@@ -8,7 +9,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class LogHelper {
     private static void log(Level level, Object object) {
-        getLogger().log(level, object);
+        getLogger().log(level, "[" + Reference.MOD_ID + "]: " + object);
     }
 
     private static Logger logger;
