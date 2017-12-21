@@ -38,3 +38,9 @@ item.starwarsmod:kybercrystal_red.name=Red Kyber Crystal
 #############################################################################
 #CreativeTabs
 itemGroup.starwarsmod.starwarsmod=Star Wars Mod
+
+#############################################################################
+#                                Keybindings                                #
+#############################################################################
+swmod.keybinds=Star Wars Mod
+key.opensaberui.desc=Open Lightsaber UI

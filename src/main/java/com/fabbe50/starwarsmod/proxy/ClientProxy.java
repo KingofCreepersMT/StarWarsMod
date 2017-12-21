@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.proxy;
 
+import com.fabbe50.starwarsmod.registry.KeyBindingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -11,6 +12,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
+        KeyBindingRegistry.init();
     }
 
     @Override
