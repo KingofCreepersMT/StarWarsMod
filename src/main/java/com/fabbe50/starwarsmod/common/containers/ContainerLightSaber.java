@@ -31,5 +31,6 @@ public class ContainerLightSaber extends Container {
 
     @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
+        return true;
     }
 }
