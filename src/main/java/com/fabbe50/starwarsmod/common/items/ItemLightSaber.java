@@ -2,6 +2,7 @@ package com.fabbe50.starwarsmod.common.items;
 
 import com.fabbe50.starwarsmod.Reference;
 import com.google.common.collect.Multimap;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -117,7 +118,6 @@ public class ItemLightSaber extends ItemBase {
                 tooltip.add(" " + Math.round(this.attackDamage) + " Attack Damage");
                 break;
             case 1:
-                stack.setTranslatableName("item." + Reference.MOD_ID + ":light_saber_off.name");
                 tooltip.add("Shift + Right Click to turn on");
                 break;
         }

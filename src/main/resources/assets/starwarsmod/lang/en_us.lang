@@ -5,7 +5,10 @@
 #############################################################################
 #                                Meta Items                                 #
 #############################################################################
-item.starwarsmod:light_saber.name=Light Saber
+item.starwarsmod:light_saber_blue.name=Blue Light Saber
+item.starwarsmod:light_saber_green.name=Green Light Saber
+item.starwarsmod:light_saber_purple.name=Purple Light Saber
+item.starwarsmod:light_saber_red.name=Red Light Saber
 item.starwarsmod:light_saber_off.name=Light Saber
 item.starwarsmod:kybercrystal_blue.name=Blue Kyber Crystal
 item.starwarsmod:kybercrystal_green.name=Green Kyber Crystal
