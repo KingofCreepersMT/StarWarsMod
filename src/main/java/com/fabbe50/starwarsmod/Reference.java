@@ -11,4 +11,6 @@ public class Reference {
 
     public static final String CLIENT_PROXY = "com.fabbe50.starwarsmod.proxy.ClientProxy";
     public static final String COMMON_PROXY = "com.fabbe50.starwarsmod.proxy.CommonProxy";
+
+    public static final int GUI_SABER = 0;
 }
