@@ -1,6 +1,7 @@
 package com.fabbe50.starwarsmod.common.items;
 
 import com.fabbe50.starwarsmod.Reference;
+import com.fabbe50.starwarsmod.registry.ItemRegistry;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
@@ -38,6 +39,16 @@ public class ItemLightSaber extends ItemBase {
     }
 
     @Override
+    public boolean canHarvestBlock(IBlockState state, ItemStack stack) {
+        return false;
+    }
+
+    @Override
+    public boolean canDestroyBlockInCreative(World world, BlockPos pos, ItemStack stack, EntityPlayer player) {
+        return false;
+    }
+
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         if (playerIn.isSneaking()) {
             if (playerIn.getHeldItem(handIn).getItemDamage() == 0)
@@ -46,8 +57,23 @@ public class ItemLightSaber extends ItemBase {
                 playerIn.getHeldItem(handIn).setItemDamage(0);
 
             return ActionResult.newResult(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn));
+        } else {
+            if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItem() instanceof ItemLightSaber)
+                playerIn.swingArm(EnumHand.OFF_HAND);
         }
         return ActionResult.newResult(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
+    }
+
+    @Override
+    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
+        if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItemDamage() == 0) {
+            target.attackEntityFrom(DamageSource.causePlayerDamage(playerIn), this.attackDamage);
+            playerIn.swingArm(EnumHand.OFF_HAND);
+        } else if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItemDamage() == 1) {
+            target.attackEntityFrom(DamageSource.causePlayerDamage(playerIn), 1);
+            playerIn.swingArm(EnumHand.OFF_HAND);
+        }
+        return true;
     }
 
     public float getAttackDamage() {
