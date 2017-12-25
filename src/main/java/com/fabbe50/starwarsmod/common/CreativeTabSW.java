@@ -26,7 +26,7 @@ public class CreativeTabSW {
             return new ItemStack(ItemRegistry.KYBER_CRYSTAL);
         }
 
-        /*@Override
+        @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
             super.displayAllRelevantItems(itemList);
 
@@ -47,21 +47,10 @@ public class CreativeTabSW {
             list1.add(ItemRegistry.LIGHT_SABER_RED);
             list1.add(ItemRegistry.KYBER_CRYSTAL);
 
-            LogHelper.info(list);
-            LogHelper.info(itemList);
-
-            for (ItemStack stack : itemList) {
-                if(list1.contains(stack.getItem()) && stack.getMetadata() == 1) {
-                    itemList.remove(stack);
-                    LogHelper.info("Removed: " + stack);
-                }
-            }
-
             List<ItemStack> temp = new ArrayList<>();
             temp.addAll(itemList);
             itemList.clear();
             itemList.addAll(list);
-            itemList.addAll(temp);
-        }*/
+        }
     };
 }
