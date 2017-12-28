@@ -1,7 +1,6 @@
 package com.fabbe50.starwarsmod.common.world;
 
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.init.Biomes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;

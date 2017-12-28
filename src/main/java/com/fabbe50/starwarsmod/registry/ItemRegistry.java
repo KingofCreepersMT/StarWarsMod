@@ -2,7 +2,6 @@ package com.fabbe50.starwarsmod.registry;
 
 import com.fabbe50.starwarsmod.common.items.ItemKyberCrystal;
 import com.fabbe50.starwarsmod.common.items.ItemLightSaber;
-import javafx.scene.effect.Light;
 import net.minecraft.item.Item;
 
 /**

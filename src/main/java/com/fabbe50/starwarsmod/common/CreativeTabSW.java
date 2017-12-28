@@ -1,19 +1,13 @@
 package com.fabbe50.starwarsmod.common;
 
 import com.fabbe50.starwarsmod.Reference;
-import com.fabbe50.starwarsmod.common.items.ItemKyberCrystal;
-import com.fabbe50.starwarsmod.common.items.ItemLightSaber;
-import com.fabbe50.starwarsmod.helpers.LogHelper;
 import com.fabbe50.starwarsmod.registry.ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**

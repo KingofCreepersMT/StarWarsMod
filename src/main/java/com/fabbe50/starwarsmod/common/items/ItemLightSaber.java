@@ -1,17 +1,10 @@
 package com.fabbe50.starwarsmod.common.items;
 
-import com.fabbe50.starwarsmod.Reference;
-import com.fabbe50.starwarsmod.registry.ItemRegistry;
-import com.google.common.collect.Multimap;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
@@ -66,11 +59,8 @@ public class ItemLightSaber extends ItemBase {
 
     @Override
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
-        if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItemDamage() == 0) {
-            target.attackEntityFrom(DamageSource.causePlayerDamage(playerIn), this.attackDamage);
-            playerIn.swingArm(EnumHand.OFF_HAND);
-        } else if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItemDamage() == 1) {
-            target.attackEntityFrom(DamageSource.causePlayerDamage(playerIn), 1);
+        if (playerIn.getHeldItem(EnumHand.OFF_HAND).getItem() instanceof ItemLightSaber) {
+            hitEntity(stack, target, playerIn);
             playerIn.swingArm(EnumHand.OFF_HAND);
         }
         return true;

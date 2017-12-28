@@ -1,6 +1,5 @@
 package com.fabbe50.starwarsmod.common.items;
 
-import com.fabbe50.starwarsmod.utils.StringUtilities;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
