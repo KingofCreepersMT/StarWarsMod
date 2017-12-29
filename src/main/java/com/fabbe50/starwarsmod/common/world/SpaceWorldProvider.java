@@ -6,7 +6,9 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraftforge.client.IRenderHandler;
 
 import javax.annotation.Nullable;
 
@@ -41,7 +43,7 @@ public class SpaceWorldProvider extends WorldProvider {
 
     @Override
     public long getWorldTime() {
-        return 6000;
+        return 18000;
     }
 
     @Override
@@ -58,5 +60,30 @@ public class SpaceWorldProvider extends WorldProvider {
     @Override
     public int getRespawnDimension(EntityPlayerMP player) {
         return 0;
+    }
+
+    @Override
+    public void setCloudRenderer(IRenderHandler renderer) {
+        super.setCloudRenderer(null);
+    }
+
+    @Override
+    public boolean canDoRainSnowIce(Chunk chunk) {
+        return false;
+    }
+
+    @Override
+    public boolean doesWaterVaporize() {
+        return true;
+    }
+
+    @Override
+    public boolean isSurfaceWorld() {
+        return false;
+    }
+
+    @Override
+    public void setSkyRenderer(IRenderHandler skyRenderer) {
+        super.setSkyRenderer(null);
     }
 }
