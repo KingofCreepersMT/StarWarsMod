@@ -5,4 +5,6 @@ package com.fabbe50.starwarsmod;
  */
 public class Config {
     public static boolean debugPlatform = false;
+
+    public static int spaceDimId = 5381;
 }

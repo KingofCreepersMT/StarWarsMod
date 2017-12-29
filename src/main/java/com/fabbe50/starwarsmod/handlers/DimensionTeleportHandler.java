@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.handlers;
 
+import com.fabbe50.starwarsmod.Config;
 import com.fabbe50.starwarsmod.helpers.LogHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -20,9 +21,9 @@ public class DimensionTeleportHandler {
         try {
             if (player.dimension == 0) {
                 if (player.posY > 300) {
-                    FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().transferPlayerToDimension((EntityPlayerMP) player, 5381, new WorldTeleporter(player.world.getMinecraftServer().getWorld(5381), player.getPosition()));
+                    FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().transferPlayerToDimension((EntityPlayerMP) player, Config.spaceDimId, new WorldTeleporter(player.world.getMinecraftServer().getWorld(5381), player.getPosition()));
                 }
-            } else if (player.dimension == 5381) {
+            } else if (player.dimension == Config.spaceDimId) {
                 if (player.posY < -20) {
                     FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().transferPlayerToDimension((EntityPlayerMP) player, 0, new WorldTeleporter(player.world.getMinecraftServer().getWorld(0), player.getPosition()));
                 }

@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.handlers;
 
+import com.fabbe50.starwarsmod.Config;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -25,10 +26,10 @@ public class WorldTeleporter extends Teleporter {
 
     @Override
     public void placeInPortal(Entity entityIn, float rotationYaw) {
-        if (world.provider.getDimension() != 5381 && entityIn instanceof EntityPlayer) {
+        if (world.provider.getDimension() != Config.spaceDimId && entityIn instanceof EntityPlayer) {
             pos = new BlockPos(pos.getX(), 280, pos.getZ());
         }
-        if (world.provider.getDimension() == 5381) {
+        if (world.provider.getDimension() == Config.spaceDimId) {
             pos = new BlockPos(pos.getX(), -10, pos.getZ());
             if (debugPlatform) {
                 int color = world.rand.nextInt(15);

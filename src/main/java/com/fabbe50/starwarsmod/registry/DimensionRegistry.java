@@ -1,5 +1,6 @@
 package com.fabbe50.starwarsmod.registry;
 
+import com.fabbe50.starwarsmod.Config;
 import com.fabbe50.starwarsmod.common.world.SpaceWorldProvider;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
@@ -11,9 +12,9 @@ public class DimensionRegistry {
     public static DimensionType SPACE_DIM;
 
     public static void init() {
-        SPACE_DIM = DimensionType.register("starwarsmod", "space", 5381, SpaceWorldProvider.class, false);
+        SPACE_DIM = DimensionType.register("starwarsmod", "space", Config.spaceDimId, SpaceWorldProvider.class, false);
 
 
-        DimensionManager.registerDimension(5381, SPACE_DIM);
+        DimensionManager.registerDimension(Config.spaceDimId, SPACE_DIM);
     }
 }
