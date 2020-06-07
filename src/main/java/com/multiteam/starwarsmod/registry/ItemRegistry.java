@@ -25,6 +25,10 @@ import java.util.List;
 public class ItemRegistry {
     private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
+    public static final RegistryObject<Item> KYBER_CRYSTAL_BLUE = ITEMS.register("kybercrystal_blue", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
+    public static final RegistryObject<Item> KYBER_CRYSTAL_GREEN = ITEMS.register("kybercrystal_green", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
+    public static final RegistryObject<Item> KYBER_CRYSTAL_PURPLE = ITEMS.register("kybercrystal_purple", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
+    public static final RegistryObject<Item> KYBER_CRYSTAL_RED = ITEMS.register("kybercrystal_red", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
 
     public ItemRegistry() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

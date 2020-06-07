@@ -25,6 +25,10 @@ import java.util.List;
 public class BlockRegistry {
     private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Reference.MOD_ID);
 
+    public static final RegistryObject<Block> KYBER_CRYSTAL_BLUE = BLOCKS.register("kybercrystal_blue", BlockKyberCrystal::new);
+    public static final RegistryObject<Block> KYBER_CRYSTAL_GREEN = BLOCKS.register("kybercrystal_green", BlockKyberCrystal::new);
+    public static final RegistryObject<Block> KYBER_CRYSTAL_PURPLE = BLOCKS.register("kybercrystal_purple", BlockKyberCrystal::new);
+    public static final RegistryObject<Block> KYBER_CRYSTAL_RED = BLOCKS.register("kybercrystal_red", BlockKyberCrystal::new);
 
     public BlockRegistry() {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
