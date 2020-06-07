@@ -350,5 +350,19 @@
 			"translation": [-1.5, -5.5, 11.5],
 			"rotation": [42, 100, -45]
 		}
-	}
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"powered": 0
+			},
+			"model": "starwarsmod:/item/lightsaber_off_purple"
+		},
+		{
+			"predicate": {
+				"powered": 1
+			},
+			"model": "starwarsmod:/item/lightsaber_purple"
+		}
+	]
 }

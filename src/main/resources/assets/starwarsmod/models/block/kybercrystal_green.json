@@ -1,0 +1,88 @@
+{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "starwarsmod:blocks/green_kyber_crystal",
+		"particle": "starwarsmod:blocks/green_kyber_crystal"
+	},
+	"elements": [
+		{
+			"name": "cube",
+			"from": [2.5, 0, 3],
+			"to": [13.5, 1, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 11, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 11, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 11, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 11, 1], "texture": "#0"},
+				"up": {"uv": [0, 0, 11, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 11, 9], "texture": "#0"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "cube",
+			"from": [3, 1, 3.5],
+			"to": [13, 4, 12.5],
+			"faces": {
+				"north": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"south": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"west": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"up": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"down": {"uv": [0, 0, 10, 3], "texture": "#0"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "cube",
+			"from": [3.5, 4, 4],
+			"to": [12.5, 4.5, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 9, 0.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 9, 0.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 9, 0.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 9, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 9, 8.5], "texture": "#0"},
+				"down": {"uv": [0, 0, 9, 0.5], "texture": "#0"}
+			},
+			"type": "cube"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.55, 0.55, 0.55],
+			"translation": [-3, 2, 0.5],
+			"rotation": [180, -3, 92]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.55, 0.55, 0.55],
+			"rotation": [180, -3, 92],
+			"translation": [-3, 2, 0.5]
+		},
+		"firstperson_righthand": {
+			"scale": [0.55, 0.55, 0.55],
+			"rotation": [180, -3, 92],
+			"translation": [-3, 2, 0]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.55, 0.55, 0.55],
+			"rotation": [180, -3, 92],
+			"translation": [-3, 2, 0]
+		},
+		"head": {
+			"scale": [1.675, 3.0250000000000004, 1.675],
+			"translation": [0, 17.5, 0]
+		},
+		"ground": {"scale": [0.55, 0.55, 0.55]},
+		"fixed": {
+			"rotation": [-88, 0, 0],
+			"translation": [0, 0, -8]
+		},
+		"gui": {
+			"scale": [0.675, 0.675, 0.675],
+			"rotation": [180, -121, 92],
+			"translation": [2.5, 0.5, 1]
+		}
+	}
+}

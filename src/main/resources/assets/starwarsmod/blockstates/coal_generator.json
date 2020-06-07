@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "starwarsmod:block/coal_generator" },
+    "facing=south": { "model": "starwarsmod:block/coal_generator", "y": 180 },
+    "facing=west":  { "model": "starwarsmod:block/coal_generator", "y": 270 },
+    "facing=east":  { "model": "starwarsmod:block/coal_generator", "y": 90 }
+  }
+}
