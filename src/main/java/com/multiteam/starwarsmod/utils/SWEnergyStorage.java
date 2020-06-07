@@ -1,8 +1,11 @@
 package com.multiteam.starwarsmod.utils;
 
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.INBT;
+import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.energy.EnergyStorage;
 
-public class SWEnergyStorage extends EnergyStorage {
+public class SWEnergyStorage extends EnergyStorage implements INBTSerializable<CompoundNBT> {
     public SWEnergyStorage(int capacity, int maxReceive) {
         super(capacity, maxReceive, 0);
     }
@@ -23,5 +26,17 @@ public class SWEnergyStorage extends EnergyStorage {
         if (this.energy > capacity) {
             this.energy = capacity;
         }
+    }
+
+    @Override
+    public CompoundNBT serializeNBT() {
+        CompoundNBT tag = new CompoundNBT();
+        tag.putInt("energy", getEnergyStored());
+        return tag;
+    }
+
+    @Override
+    public void deserializeNBT(CompoundNBT nbt) {
+        setEnergy(nbt.getInt("energy"));
     }
 }
