@@ -29,8 +29,13 @@ public class ContainerRegistry {
         CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
+    public static RegistryObject<ContainerType<ContainerSolarGenerator>> SOLAR_GENERATOR = CONTAINERS.register("solar_generator", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        BlockPos pos = data.readBlockPos();
+        return new ContainerSolarGenerator(windowId, StarWarsMod.proxy.getClientWorld(), pos, inv, StarWarsMod.proxy.getClientPlayer());
+    }));
 
 
     public static void registerScreens() {
+        ScreenManager.registerFactory(SOLAR_GENERATOR.get(), ScreenSolarGenerator::new);
     }
 }

@@ -15,6 +15,7 @@ import java.util.List;
 public class TileEntityRegistry {
     private static final DeferredRegister<TileEntityType<?>> TILES = new DeferredRegister<>(ForgeRegistries.TILE_ENTITIES, Reference.MOD_ID);
 
+    public static final RegistryObject<TileEntityType<TileEntitySolarGenerator>> SOLAR_GENERATOR = TILES.register("solar_generator", () -> TileEntityType.Builder.create(TileEntitySolarGenerator::new, BlockRegistry.SOLAR_GENERATOR.get()).build(null));
 
     public TileEntityRegistry() {
         TILES.register(FMLJavaModLoadingContext.get().getModEventBus());

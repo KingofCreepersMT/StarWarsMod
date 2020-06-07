@@ -29,6 +29,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> KYBER_CRYSTAL_GREEN = BLOCKS.register("kybercrystal_green", BlockKyberCrystal::new);
     public static final RegistryObject<Block> KYBER_CRYSTAL_PURPLE = BLOCKS.register("kybercrystal_purple", BlockKyberCrystal::new);
     public static final RegistryObject<Block> KYBER_CRYSTAL_RED = BLOCKS.register("kybercrystal_red", BlockKyberCrystal::new);
+    public static final RegistryObject<Block> SOLAR_GENERATOR = BLOCKS.register("solar_generator", BlockSolarGenerator::new);
 
     public BlockRegistry() {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
