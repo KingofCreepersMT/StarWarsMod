@@ -29,6 +29,10 @@ public class ItemRegistry {
     public static final RegistryObject<Item> KYBER_CRYSTAL_GREEN = ITEMS.register("kybercrystal_green", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
     public static final RegistryObject<Item> KYBER_CRYSTAL_PURPLE = ITEMS.register("kybercrystal_purple", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
     public static final RegistryObject<Item> KYBER_CRYSTAL_RED = ITEMS.register("kybercrystal_red", () -> new BlockItem(BlockRegistry.KYBER_CRYSTAL_BLUE.get(), new Item.Properties().group(StarWarsGroup.group)));
+    public static final RegistryObject<Item> LIGHT_SABER_BLUE = ITEMS.register("lightsaber_blue", () -> new ItemLightSaber(ItemTier.DIAMOND, 4, -2.4F, (new Item.Properties().group(StarWarsGroup.group))));
+    public static final RegistryObject<Item> LIGHT_SABER_GREEN = ITEMS.register("lightsaber_green", () -> new ItemLightSaber(ItemTier.DIAMOND, 4, -2.4F, (new Item.Properties().group(StarWarsGroup.group))));
+    public static final RegistryObject<Item> LIGHT_SABER_PURPLE = ITEMS.register("lightsaber_purple", () -> new ItemLightSaber(ItemTier.DIAMOND, 4, -2.4F, (new Item.Properties().group(StarWarsGroup.group))));
+    public static final RegistryObject<Item> LIGHT_SABER_RED = ITEMS.register("lightsaber_red", () -> new ItemLightSaber(ItemTier.DIAMOND, 4, -2.4F, (new Item.Properties().group(StarWarsGroup.group))));
 
     public ItemRegistry() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
